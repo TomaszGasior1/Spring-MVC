@@ -7,9 +7,9 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>WebContent/WEB-INF/offers-servlet.xml</config>
 		<config>src/com/tomaszgasior/spring/web/config/dao-context.xml</config>
 		<config>src/com/tomaszgasior/spring/web/config/service-context.xml</config>
+		<config>WebContent/WEB-INF/spring-servlet.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
