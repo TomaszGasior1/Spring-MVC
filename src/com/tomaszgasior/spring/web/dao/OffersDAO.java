@@ -23,11 +23,8 @@ public class OffersDAO {
 
 	private NamedParameterJdbcTemplate jdbc;
 
-	public OffersDAO(){
-		System.out.println("Successfully loaded OffersDao");
-	}
 	
-	//@Autowired
+	@Autowired
 	public void setDataSource(DataSource jdbc) {
 		this.jdbc = new NamedParameterJdbcTemplate(jdbc);
 		
