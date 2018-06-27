@@ -8,5 +8,8 @@
 </head>
 <body>
 Hi there!
+
+Session: <%= session.getAttribute("name") %>
+
 </body>
 </html>
