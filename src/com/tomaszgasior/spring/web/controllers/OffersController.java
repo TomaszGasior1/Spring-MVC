@@ -71,7 +71,10 @@ public class OffersController {
 	
 	
 	@RequestMapping("/createoffer")
-	public String createOffer(){
+	public String createOffer(Model model){
+		
+		model.addAttribute("offer", new Offer());
+		
 		
 				
 		return "createoffer";
@@ -85,12 +88,12 @@ public class OffersController {
 				System.out.println("Validation failed");
 				List<ObjectError> errors = result.getAllErrors();
 				for(ObjectError error: errors)
-					System.out.println(error);
-				System.out.println(offer);
+					System.out.println(error.getDefaultMessage());
+				return "createoffer";
 			}
 			else
 				System.out.println("Validation succeeded!");
-				System.out.println(offer);
+				
 			
 			return "offercreated";
 	}
