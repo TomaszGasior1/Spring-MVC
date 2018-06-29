@@ -85,15 +85,8 @@ public class OffersController {
 
 			if(result.hasErrors())
 			{
-				System.out.println("Validation failed");
-				List<ObjectError> errors = result.getAllErrors();
-				for(ObjectError error: errors)
-					System.out.println(error.getDefaultMessage());
 				return "createoffer";
 			}
-			else
-				System.out.println("Validation succeeded!");
-				
 			
 			return "offercreated";
 	}
